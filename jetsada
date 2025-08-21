@@ -5,10 +5,12 @@ WHERE Products.CategoryID = Categories.CategoryID
 SELECT c.CategoryName, p.UnitPrice
 FROM Products AS p, Categories AS c
 WHERE p.CategoryID = c.CategoryID
+AND CategoryName = 'seafood'
 
 SELECT c.CategoryName, p.ProductName, p.UnitPrice
 FROM Products AS p JOIN Categories AS c
 ON p.CategoryID = c.CategoryID
+AND CategoryName = 'seafood'
 
 SELECT CompanyName, OrderID
 FROM Orders JOIN Shippers
@@ -48,7 +50,14 @@ group by p.ProductID, p.ProductName
 
 SELECT  p.ProductID, p.ProductName
 FROM Employees e JOIN Orders o ON e.EmployeeID = o.EmployeeID
-                    JOIN[Order Details] od ON o.OrderID = od.OrderID
+                    JOIN [Order Details] od ON o.OrderID = od.OrderID
                     JOIN Products p ON p.ProductID = od.ProductID
 WHERE e.FirstName = 'Nancy'
 order by ProductID
+
+SELECT distinct s.Country
+FROM Customers c JOIN Orders o ON c. CustomerID = o.CustomerID
+                    JOIN [Order Details] od ON o.OrderID = od.OrderID
+                    JOIN Products p ON p.ProductID = od.ProductID
+                    JOIN Suppliers s ON s. SupplierID = p.SupplierID
+WHERE c.CompanyName = 'Around the Horn'
