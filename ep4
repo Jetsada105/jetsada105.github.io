@@ -1,1 +1,22 @@
+SELECT CategoryName, ProductName, UnitPrice
+FROM Products, Categories
+WHERE Products.CategoryID = Categories.CategoryID
+
+SELECT c.CategoryName, p.UnitPrice
+FROM Products AS p, Categories AS c
+WHERE p.CategoryID = c.CategoryID
+
+SELECT c.CategoryName, p.ProductName, p.UnitPrice
+FROM Products AS p JOIN Categories AS c
+ON p.CategoryID = c.CategoryID
+
+SELECT CompanyName, OrderID
+FROM Orders JOIN Shippers
+ON Shippers.ShipperID=Orders.Shipvia
+WHERE OrderID=10275
+
+SELECT CompanyName, OrderID
+FROM Orders JOIN Shippers
+ON Shippers.ShipperID=Orders.Shipvia
+WHERE OrderID=10275
 
