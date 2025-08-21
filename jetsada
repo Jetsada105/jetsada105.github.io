@@ -61,3 +61,16 @@ FROM Customers c JOIN Orders o ON c. CustomerID = o.CustomerID
                     JOIN Products p ON p.ProductID = od.ProductID
                     JOIN Suppliers s ON s. SupplierID = p.SupplierID
 WHERE c.CompanyName = 'Around the Horn'
+
+SELECT p.ProductID, p.ProductName, sum(Quantity) จำนวนซื้อ
+FROM Customers c JOIN Orders o ON c. CustomerID = o.CustomerID
+                    JOIN [Order Details] od ON o.OrderID = od.OrderID
+                    JOIN Products p ON p.ProductID = od.ProductID
+WHERE c.CompanyName = 'Around the Horn'
+group by p.ProductID, p.ProductName
+
+SELECT o.OrderID, FirstName,
+            sum(od.Quantity* od.UnitPrice * (1-Discount)) TotalCash
+FROM Orders o JOIN Employees e ON o.EmployeeID = e.EmployeeID
+                JOIN [Order Details] od ON o.OrderID = od.OrderID
+group by o.OrderID, FirstName
