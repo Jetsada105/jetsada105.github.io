@@ -45,3 +45,10 @@ order by 2 DESC
 SELECT p.ProductID, p.ProductName, Quantity
 FROM Products p JOIN [Order Details] od ON p.ProductID = od.ProductID
 group by p.ProductID, p.ProductName
+
+SELECT  p.ProductID, p.ProductName
+FROM Employees e JOIN Orders o ON e.EmployeeID = o.EmployeeID
+                    JOIN[Order Details] od ON o.OrderID = od.OrderID
+                    JOIN Products p ON p.ProductID = od.ProductID
+WHERE e.FirstName = 'Nancy'
+order by ProductID
