@@ -1,7 +1,35 @@
 -- 1.   จงแสดงให้เห็นว่าพนักงานแต่ละคนขายสินค้าประเภท Beverage ได้เป็นจำนวนเท่าใด และเป็นจำนวนกี่ชิ้น เฉพาะครึ่งปีแรกของ 2540(ทศนิยม 4 ตำแหน่ง)
 -- 2.   จงแสดงชื่อบริษัทตัวแทนจำหน่าย  เบอร์โทร เบอร์แฟกซ์ ชื่อผู้ติดต่อ จำนวนชนิดสินค้าประเภท Beverage ที่จำหน่าย โดยแสดงจำนวนสินค้า จากมากไปน้อย 3 อันดับแรก
 -- 3.   จงแสดงข้อมูลชื่อลูกค้า ชื่อผู้ติดต่อ เบอร์โทรศัพท์ ของลูกค้าที่ซื้อของในเดือน สิงหาคม 2539 ยอดรวมของการซื้อโดยแสดงเฉพาะ ลูกค้าที่ไม่มีเบอร์แฟกซ์
+SELECT 
+  c.CustomerID,
+  c.CompanyName,
+  c.ContactName,
+  c.Phone,
+  CAST(SUM(od.UnitPrice * od.Quantity * (1 - od.Discount)) AS DECIMAL(18,4)) AS TotalAmount
+FROM Orders o
+JOIN [Order Details] od ON o.OrderID = od.OrderID
+JOIN Customers c ON o.CustomerID = c.CustomerID
+WHERE o.OrderDate >= '1996-08-01' AND o.OrderDate < '1996-09-01'
+  AND (c.Fax IS NULL OR LTRIM(RTRIM(c.Fax)) = '')
+GROUP BY c.CustomerID, c.CompanyName, c.ContactName, c.Phone
+HAVING SUM(od.UnitPrice * od.Quantity * (1 - od.Discount)) > 0
+ORDER BY c.CompanyName;
+
 -- 4.   แสดงรหัสสินค้า ชื่อสินค้า จำนวนที่ขายได้ทั้งหมดในปี 2541 ยอดเงินรวมที่ขายได้ทั้งหมดโดยเรียงลำดับตาม จำนวนที่ขายได้เรียงจากน้อยไปมาก พรอ้มทั้งใส่ลำดับที่ ให้กับรายการแต่ละรายการด้วย
+SELECT 
+  ROW_NUMBER() OVER (ORDER BY TotalQuantity ASC) AS RankOrder,
+  p.ProductID,
+  p.ProductName,
+  SUM(od.Quantity) AS TotalQuantity,
+  CAST(SUM(od.UnitPrice * od.Quantity * (1 - od.Discount)) AS DECIMAL(18,4)) AS TotalAmount
+FROM [Order Details] od
+JOIN Orders o ON od.OrderID = o.OrderID
+JOIN Products p ON od.ProductID = p.ProductID
+WHERE o.OrderDate >= '1998-01-01' AND o.OrderDate < '1999-01-01'
+GROUP BY p.ProductID, p.ProductName
+ORDER BY TotalQuantity ASC;
+
 -- 5.   จงแสดงข้อมูลของสินค้าที่ขายในเดือนมกราคม 2540 เรียงตามลำดับจากมากไปน้อย 5 อันดับใส่ลำดับด้วย รวมถึงราคาเฉลี่ยที่ขายให้ลูกค้าทั้งหมดด้วย
 -- 6.   จงแสดงชื่อพนักงาน จำนวนใบสั่งซื้อ ยอดเงินรวมทั้งหมด ที่พนักงานแต่ละคนขายได้ ในเดือน ธันวาคม 2539 โดยแสดงเพียง 5 อันดับที่มากที่สุด
 -- 7.   จงแสดงรหัสสินค้า ชื่อสินค้า ชื่อประเภทสินค้า ที่มียอดขาย สูงสุด 10 อันดับแรก ในเดือน ธันวาคม 2539 โดยแสดงยอดขาย และจำนวนที่ขายด้วย
