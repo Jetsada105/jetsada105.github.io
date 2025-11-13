@@ -1,14 +1,10 @@
-// เอฟเฟกต์ Fade-in ตอนเลื่อนลง
-const sections = document.querySelectorAll("section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-in");
+// Scroll smooth for nav links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
-}, { threshold: 0.2 });
-
-sections.forEach(section => {
-  observer.observe(section);
 });
