@@ -3,86 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rises Consulting - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <title>หน้าแรก GitHub.io ของนักศึกษา</title>
+  <style>
+    body {
+      font-family: "Prompt", sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #2d3436;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    section {
+      background: white;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 900px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #c0392b;
+      border-left: 6px solid #c0392b;
+      padding-left: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    li::before {
+      content: "• ";
+      color: #c0392b;
+    }
+    a {
+      color: #0984e3;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img.profile {
+      width: 140px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Rises Consulting</div>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <header>
+    <h1>Jetsada Susakunjinda</h1>
+    <p>นักศึกษาสาขาวิทยาการคอมพิวเตอร์ | สนใจด้าน AI & Web Development</p>
   </header>
 
-  <section id="hero" class="hero">
-    <h1>We Help You <span>Rise Higher</span></h1>
-    <p>เราช่วยให้ธุรกิจของคุณเติบโตด้วยกลยุทธ์ที่เหมาะสม</p>
-    <button onclick="scrollToSection('contact')">Get a Free Consultation</button>
+  <section id="profile">
+    <h2>1. แนะนำตัว (Introduction / Profile)</h2>
+    <img src="profile.jpg" alt="Profile Photo" class="profile">
+    <p>สวัสดีครับ ผม <strong>เจษฎา สุศากุลจินดา</strong> นักศึกษาชั้นปีที่ 3 
+      คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุดรธานี</p>
+    <p>ผมมีความสนใจด้าน <strong>AI, Web Development, Data Science</strong> และการพัฒนาโปรแกรมเพื่อแก้ปัญหาในชีวิตประจำวัน</p>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Us / เกี่ยวกับเรา</h2>
-    <p>
-      เราคือทีมที่ปรึกษาด้านเทคโนโลยีและกลยุทธ์ทางธุรกิจ ที่มุ่งเน้นการใช้ข้อมูลและนวัตกรรม 
-      เพื่อขับเคลื่อนองค์กรของคุณให้เติบโตอย่างยั่งยืน
+  <section id="skills">
+    <h2>2. ทักษะ (Skills)</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, Java, HTML/CSS, JavaScript</li>
+      <li><strong>AI & Data:</strong> TensorFlow, scikit-learn, Power BI, SQL</li>
+      <li><strong>Tools:</strong> Git, VS Code, Figma, Google Colab</li>
+      <li><strong>Soft Skills:</strong> การสื่อสาร, การทำงานเป็นทีม, การแก้ปัญหา</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
+    <ul>
+      <li>เว็บไซต์จองห้องประชุมออนไลน์ (Web Project)</li>
+      <li>AI ทำนายโรคเบาหวานด้วย Machine Learning (Data Project)</li>
+      <li>Dashboard วิเคราะห์ข้อมูลร้านกาแฟ (Data Visualization)</li>
+    </ul>
+    <p>ดูโค้ดได้ที่: 
+      <a href="https://github.com/yourusername">GitHub Repository</a>
     </p>
   </section>
 
-  <section id="services" class="services">
-    <h2>Our Services / บริการของเรา</h2>
-    <div class="service-grid">
-      <div class="card">
-        <h3>AI & Data Solutions</h3>
-        <p>วิเคราะห์ข้อมูลเชิงลึก และสร้างโมเดล Machine Learning เพื่อพัฒนาการตัดสินใจของธุรกิจ</p>
-      </div>
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>สร้างเว็บไซต์ที่สวยงามและมีประสิทธิภาพด้วยเทคโนโลยีล่าสุด</p>
-      </div>
-      <div class="card">
-        <h3>Cybersecurity</h3>
-        <p>ปกป้องข้อมูลและระบบของคุณจากภัยคุกคามทางไซเบอร์</p>
-      </div>
-    </div>
+  <section id="education">
+    <h2>4. การศึกษา (Education)</h2>
+    <p>คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์<br>
+       มหาวิทยาลัยราชภัฏอุดรธานี<br>
+       พ.ศ. 2566 - ปัจจุบัน
+    </p>
   </section>
 
-  <section id="projects" class="projects">
-    <h2>Our Projects / ผลงานที่ผ่านมา</h2>
-    <div class="project-grid">
-      <div class="card">
-        <h3>AI Diabetes Prediction</h3>
-        <p>โมเดลทำนายโรคเบาหวานด้วย Machine Learning</p>
-      </div>
-      <div class="card">
-        <h3>Smart Café Dashboard</h3>
-        <p>แดชบอร์ดวิเคราะห์ข้อมูลยอดขายร้านกาแฟ</p>
-      </div>
-      <div class="card">
-        <h3>Online Meeting System</h3>
-        <p>ระบบจองห้องประชุมออนไลน์ (Web App)</p>
-      </div>
-    </div>
+  <section id="activities">
+    <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
+    <ul>
+      <li>ผู้เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
+      <li>เข้าร่วมแข่งขัน <strong>UDRU Hackathon 2025</strong></li>
+      <li>ได้รับรางวัลชนะเลิศโครงงานด้าน IoT</li>
+    </ul>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us / ติดต่อเรา</h2>
-    <form>
-      <input type="text" placeholder="ชื่อ / Name" required>
-      <input type="email" placeholder="อีเมล / Email" required>
-      <textarea placeholder="ข้อความ / Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section id="contact">
+    <h2>6. ติดต่อ (Contact)</h2>
+    <p><strong>Email:</strong> yourname@gmail.com<br>
+       <strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a><br>
+       <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourname</a>
+    </p>
   </section>
 
-  <footer>
-    <p>© 2025 Rises Consulting | Designed by You 🚀</p>
-  </footer>
+  <section id="career">
+    <h2>7. องค์ประกอบเสริม (Career Interest)</h2>
+    <p>มุ่งหวังเป็นนักพัฒนา AI Engineer หรือ Data Scientist 
+       ที่สามารถใช้เทคโนโลยีเพื่อพัฒนาชุมชนและยกระดับคุณภาพชีวิต</p>
+  </section>
+
 </body>
 </html>
+
