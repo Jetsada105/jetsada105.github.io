@@ -70,29 +70,136 @@ body {
   background: linear-gradient(135deg, #c5ceff 50%, #d8ffb3 50%);
   border-radius: 50px;
 }
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  color: #222;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0046ff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+}
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.navbar a.active, .navbar a:hover {
+  color: #0046ff;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem 10%;
+  background-color: #fdfdfd;
+}
+.hero-text h1 {
+  font-size: 2.4rem;
+  color: #0046ff;
+}
+.hero-text span {
+  color: #00c46a;
+}
+.hero-text p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+.btn-outline {
+  display: inline-block;
+  border: 2px solid #0046ff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  color: #0046ff;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+.btn-outline:hover {
+  background-color: #0046ff;
+  color: white;
+}
+.hero-pattern {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #c5ceff 50%, #d8ffb3 50%);
+  border-radius: 60px;
+}
+
+/* Section */
+.section {
+  padding: 6rem 10%;
+  text-align: center;
+}
+.section.light {
+  background-color: #eef5ff;
+}
+.section h2 {
+  color: #0046ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.section p {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  line-height: 1.8;
+}
 
 /* Cards */
 .cards {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin: 3rem auto;
   flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 .card {
   background: white;
-  border: 1px solid #0046ff;
+  border: 1.5px solid #0046ff;
   border-radius: 16px;
-  padding: 1.5rem;
-  width: 320px;
+  padding: 2rem;
+  width: 280px;
+  transition: 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
 }
 .card h3 {
   color: #0046ff;
-}
-.link {
-  color: #0046ff;
-  text-decoration: none;
-  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
@@ -101,14 +208,5 @@ footer {
   padding: 1.5rem;
   background: #fff;
   border-top: 1px solid #ddd;
-}
-
-/* Page Content */
-.page {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: white;
-  border-radius: 20px;
-  border: 1px solid #0046ff;
+  font-size: 0.9rem;
 }
