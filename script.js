@@ -1,21 +1,9 @@
-// เปลี่ยนสีเมนูเมื่อ scroll ถึง section
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".navbar a");
+function scrollToSection(id) {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100;
-    if (pageYOffset >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + current) {
-      link.classList.add("active");
-    }
-  });
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("ขอบคุณสำหรับข้อความของคุณ! We’ll get back to you soon.");
 });
 
