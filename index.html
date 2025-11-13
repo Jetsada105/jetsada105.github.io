@@ -3,76 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rises Consulting | Portfolio</title>
+  <title>Rises Consulting - Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">Rises</div>
+    <div class="logo">Rises Consulting</div>
     <nav>
       <ul>
-        <li><a href="#home" class="active">หน้าแรก / Home</a></li>
-        <li><a href="#about">เกี่ยวกับเรา / About</a></li>
-        <li><a href="#services">บริการ / Services</a></li>
-        <li><a href="#contact">ติดต่อ / Contact</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-text">
-      <h1>Strategies for Success<br><span>กลยุทธ์สู่ความสำเร็จ</span></h1>
-      <p>We help students and professionals build their future.<br>
-      เราช่วยให้นักศึกษาและมืออาชีพสร้างอนาคตที่ดีกว่า</p>
-      <a href="#contact" class="btn-outline">Get a Free Consultation</a>
-    </div>
-    <div class="hero-pattern"></div>
+  <section id="hero" class="hero">
+    <h1>We Help You <span>Rise Higher</span></h1>
+    <p>เราช่วยให้ธุรกิจของคุณเติบโตด้วยกลยุทธ์ที่เหมาะสม</p>
+    <button onclick="scrollToSection('contact')">Get a Free Consultation</button>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>เกี่ยวกับเรา / About Us</h2>
-    <p>เราคือทีมที่ปรึกษาด้านเทคโนโลยีและนวัตกรรม 
-      ที่มุ่งเน้นช่วยให้นักศึกษาและองค์กรขนาดเล็กเติบโตด้วย AI, Data, 
-      และ Web Development.</p>
-    <p>We are a tech consulting team focusing on empowering students and SMEs 
-      with solutions in AI, Data Science, and Web Development.</p>
+  <section id="about" class="about">
+    <h2>About Us / เกี่ยวกับเรา</h2>
+    <p>
+      เราคือทีมที่ปรึกษาด้านเทคโนโลยีและกลยุทธ์ทางธุรกิจ ที่มุ่งเน้นการใช้ข้อมูลและนวัตกรรม 
+      เพื่อขับเคลื่อนองค์กรของคุณให้เติบโตอย่างยั่งยืน
+    </p>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section light">
-    <h2>บริการของเรา / Our Services</h2>
-    <div class="cards">
+  <section id="services" class="services">
+    <h2>Our Services / บริการของเรา</h2>
+    <div class="service-grid">
       <div class="card">
-        <h3>AI & Machine Learning</h3>
-        <p>วิเคราะห์ข้อมูล, พัฒนาโมเดลทำนาย, และระบบอัตโนมัติ.</p>
+        <h3>AI & Data Solutions</h3>
+        <p>วิเคราะห์ข้อมูลเชิงลึก และสร้างโมเดล Machine Learning เพื่อพัฒนาการตัดสินใจของธุรกิจ</p>
       </div>
       <div class="card">
         <h3>Web Development</h3>
-        <p>ออกแบบและสร้างเว็บไซต์ด้วยเทคโนโลยีทันสมัย 
-          HTML, CSS, JavaScript.</p>
+        <p>สร้างเว็บไซต์ที่สวยงามและมีประสิทธิภาพด้วยเทคโนโลยีล่าสุด</p>
       </div>
       <div class="card">
-        <h3>Data Dashboard</h3>
-        <p>สร้างแดชบอร์ดแสดงผลข้อมูลด้วย Power BI, Chart.js, หรือ Plotly.</p>
+        <h3>Cybersecurity</h3>
+        <p>ปกป้องข้อมูลและระบบของคุณจากภัยคุกคามทางไซเบอร์</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>ติดต่อเรา / Contact</h2>
-    <p>📧 Email: yourname@gmail.com</p>
-    <p>🌐 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-    <p>📍 จังหวัดอุดรธานี</p>
+  <section id="projects" class="projects">
+    <h2>Our Projects / ผลงานที่ผ่านมา</h2>
+    <div class="project-grid">
+      <div class="card">
+        <h3>AI Diabetes Prediction</h3>
+        <p>โมเดลทำนายโรคเบาหวานด้วย Machine Learning</p>
+      </div>
+      <div class="card">
+        <h3>Smart Café Dashboard</h3>
+        <p>แดชบอร์ดวิเคราะห์ข้อมูลยอดขายร้านกาแฟ</p>
+      </div>
+      <div class="card">
+        <h3>Online Meeting System</h3>
+        <p>ระบบจองห้องประชุมออนไลน์ (Web App)</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <section id="contact" class="contact">
+    <h2>Contact Us / ติดต่อเรา</h2>
+    <form>
+      <input type="text" placeholder="ชื่อ / Name" required>
+      <input type="email" placeholder="อีเมล / Email" required>
+      <textarea placeholder="ข้อความ / Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
   <footer>
-    <p>© 2025 Rises Consulting | สร้างโดย Jetsada Susakunjinda</p>
+    <p>© 2025 Rises Consulting | Designed by You 🚀</p>
   </footer>
 </body>
 </html>
