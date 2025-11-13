@@ -1,89 +1,95 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Jetsada Susakunjinda</title>
-
-  <!-- ฟอนต์และไอคอน -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | เจษฎา สุศากุลจินดา</title>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <!-- ลิงก์ไปยัง CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Jetsada Susakunjinda</h1>
-    <p>Computer Science Student | AI & Web Developer</p>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">J SUSAKUN</a>
+      <ul class="nav-links">
+        <li><a href="#profile">เกี่ยวกับ</a></li>
+        <li><a href="#services">บริการ/โครงการ</a></li>
+        <li><a href="#projects">ผลงาน</a></li>
+        <li><a href="#contact">ติดต่อ</a></li>
+      </ul>
+      <a href="#contact" class="btn-primary">ติดต่อเลย</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>พัฒนาธุรกิจด้วย AI & Web Dev</h1>
+      <p>ผมคือ เจษฎา สุศากุลจินดา — นักศึกษาวิทยาการคอมพิวเตอร์ที่พร้อมสร้างผลงานจริง เพื่อแก้ปัญหาทางธุรกิจ</p>
+      <a href="#services" class="btn-secondary">ดูบริการของผม</a>
+    </div>
   </header>
 
-  <section id="profile">
-    <h2>1. แนะนำตัว (Introduction / Profile)</h2>
-    <img src="profile.jpg" alt="Profile Photo" class="profile">
-    <p>สวัสดีครับ ผม <strong>เจษฎา สุศากุลจินดา</strong> นักศึกษาชั้นปีที่ 3 
-    คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุดรธานี<br>
-    สนใจด้าน <strong>AI, Web Development, และ Data Science</strong> 🧠💻</p>
+  <section id="profile" class="section">
+    <div class="container profile-grid">
+      <div class="profile-img">
+        <img src="profile.jpg" alt="Profile Photo">
+      </div>
+      <div class="profile-content">
+        <h2>เกี่ยวกับผม</h2>
+        <p>ผมเป็นนักศึกษาคณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุดรธานี สนใจด้าน AI, Web Development และ Data Science โดยมีเป้าหมายสร้างโซลูชันที่ใช้งานได้จริงในชีวิตและธุรกิจ</p>
+        <p>ชั้นปีที่ 3 พร้อมเรียนรู้และลงมือทำอย่างจริงจัง</p>
+      </div>
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>2. ทักษะ (Skills)</h2>
-    <ul>
-      <li><strong>Programming:</strong> Python, Java, HTML/CSS, JavaScript</li>
-      <li><strong>AI & Data:</strong> TensorFlow, scikit-learn, Power BI, SQL</li>
-      <li><strong>Tools:</strong> Git, VS Code, Figma, Google Colab</li>
-      <li><strong>Soft Skills:</strong> การสื่อสาร, ทำงานเป็นทีม, การแก้ปัญหา</li>
-    </ul>
+  <section id="services" class="section bg-light">
+    <div class="container">
+      <h2>บริการ / โครงการ</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>เว็บไซต์ & Web App</h3>
+          <p>สร้างเว็บไซต์หรือแอปพลิเคชันสำหรับธุรกิจหรือโครงการของคุณ</p>
+        </div>
+        <div class="service-card">
+          <h3>AI & Data Analysis</h3>
+          <p>วิเคราะห์ข้อมูล สร้างโมเดล AI เพื่อคาดการณ์และแก้ปัญหาทางธุรกิจ</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Visualization</h3>
+          <p>สร้างแผงควบคุม (dashboard) เพื่อแสดงผลข้อมูลแบบเรียลไทม์</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
-    <ul>
-      <li>🌐 เว็บไซต์จองห้องประชุมออนไลน์ (Web Project)</li>
-      <li>🤖 AI ทำนายโรคเบาหวานด้วย Machine Learning (Data Project)</li>
-      <li>📊 Dashboard วิเคราะห์ข้อมูลร้านกาแฟ (Data Visualization)</li>
-    </ul>
-    <p>ดูผลงานทั้งหมดได้ที่ 👉 
-      <a href="https://github.com/yourusername" target="_blank">GitHub Repository</a>
-    </p>
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>ผลงานที่ผ่านมา</h2>
+      <ul class="projects-list">
+        <li>เว็บไซต์จองห้องประชุมออนไลน์</li>
+        <li>AI ทำนายโรคเบาหวาน</li>
+        <li>Dashboard วิเคราะห์ข้อมูลร้านกาแฟ</li>
+      </ul>
+      <p>ดูผลงานทั้งหมดที่ <a href="https://github.com/yourusername" target="_blank">GitHub Repository</a></p>
+    </div>
   </section>
 
-  <section id="education">
-    <h2>4. การศึกษา (Education)</h2>
-    <p>🎓 คณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์<br>
-       มหาวิทยาลัยราชภัฏอุดรธานี<br>
-       พ.ศ. 2566 - ปัจจุบัน</p>
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2>ติดต่อผม</h2>
+      <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourname</a></p>
+    </div>
   </section>
 
-  <section id="activities">
-    <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
-    <ul>
-      <li>เข้าร่วมอบรม “AI for Beginners by Microsoft”</li>
-      <li>เข้าร่วมแข่งขัน <strong>UDRU Hackathon 2025</strong></li>
-      <li>ได้รับรางวัลชนะเลิศโครงงานด้าน IoT</li>
-    </ul>
-  </section>
-
-  <section id="contact">
-    <h2>6. ติดต่อ (Contact)</h2>
-    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a><br>
-       <i class="fab fa-github"></i> GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a><br>
-       <i class="fab fa-linkedin"></i> LinkedIn: <a href="#">linkedin.com/in/yourname</a>
-    </p>
-  </section>
-
-  <section id="career">
-    <h2>7. องค์ประกอบเสริม (Career Interest)</h2>
-    <p>เป้าหมายในอนาคตคือการเป็น <strong>AI Engineer</strong> หรือ 
-       <strong>Data Scientist</strong> ที่สามารถสร้างนวัตกรรมเพื่อพัฒนาชุมชนและธุรกิจได้จริง 🚀</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Jetsada Susakunjinda | Built with ❤️ using GitHub Pages</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 เจษฎา สุศากุลจินดา | Built with ❤️ on GitHub Pages</p>
+    </div>
   </footer>
 
-  <!-- ลิงก์ JS -->
   <script src="script.js"></script>
 </body>
 </html>
