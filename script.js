@@ -1,10 +1,2 @@
-// Scroll smooth for nav links
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+// เพิ่มอนาคตได้ เช่น ปุ่ม toggle เมนู หรือ dark mode
+console.log("Rises Consulting Website Loaded");
