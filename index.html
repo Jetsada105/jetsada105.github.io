@@ -2,96 +2,55 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio | เจษฎา สุศากุลจินดา</title>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rises Consulting | หน้าแรก</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">J SUSAKUN</a>
-      <ul class="nav-links">
-        <li><a href="#profile">เกี่ยวกับ</a></li>
-        <li><a href="#services">บริการ/โครงการ</a></li>
-        <li><a href="#projects">ผลงาน</a></li>
-        <li><a href="#contact">ติดต่อ</a></li>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">Rises</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">หน้าแรก / Home</a></li>
+        <li><a href="about.html">เกี่ยวกับเรา / About Us</a></li>
+        <li><a href="services.html">บริการ / Services</a></li>
+        <li><a href="contact.html">ติดต่อ / Contact</a></li>
       </ul>
-      <a href="#contact" class="btn-primary">ติดต่อเลย</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="container">
-      <h1>พัฒนาธุรกิจด้วย AI & Web Dev</h1>
-      <p>ผมคือ เจษฎา สุศากุลจินดา — นักศึกษาวิทยาการคอมพิวเตอร์ที่พร้อมสร้างผลงานจริง เพื่อแก้ปัญหาทางธุรกิจ</p>
-      <a href="#services" class="btn-secondary">ดูบริการของผม</a>
-    </div>
+    </nav>
   </header>
 
-  <section id="profile" class="section">
-    <div class="container profile-grid">
-      <div class="profile-img">
-        <img src="profile.jpg" alt="Profile Photo">
-      </div>
-      <div class="profile-content">
-        <h2>เกี่ยวกับผม</h2>
-        <p>ผมเป็นนักศึกษาคณะวิทยาศาสตร์ สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏอุดรธานี สนใจด้าน AI, Web Development และ Data Science โดยมีเป้าหมายสร้างโซลูชันที่ใช้งานได้จริงในชีวิตและธุรกิจ</p>
-        <p>ชั้นปีที่ 3 พร้อมเรียนรู้และลงมือทำอย่างจริงจัง</p>
-      </div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Strategies for Success<br><span>กลยุทธ์สู่ความสำเร็จ</span></h1>
+      <p>We help students and professionals build their future.<br>เราช่วยให้นักศึกษาและมืออาชีพสร้างอนาคตที่ดีขึ้น</p>
+      <a href="contact.html" class="btn-outline">Get a Free Consultation</a>
+    </div>
+    <div class="hero-pattern"></div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="cards">
+    <div class="card">
+      <h3>Strategies for Success</h3>
+      <p>I'm a paragraph. Click here to add your own text and edit me.  
+      ฉันคือส่วนข้อความ คุณสามารถแก้ไขเนื้อหาได้ที่นี่</p>
+      <a href="about.html" class="link">Read More</a>
+    </div>
+
+    <div class="card">
+      <h3>Optimize Your Business</h3>
+      <p>Click here to add your text and edit me.  
+      คลิกเพื่อเพิ่มข้อความของคุณและแก้ไขได้</p>
+      <a href="services.html" class="link">Book Now</a>
     </div>
   </section>
 
-  <section id="services" class="section bg-light">
-    <div class="container">
-      <h2>บริการ / โครงการ</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3>เว็บไซต์ & Web App</h3>
-          <p>สร้างเว็บไซต์หรือแอปพลิเคชันสำหรับธุรกิจหรือโครงการของคุณ</p>
-        </div>
-        <div class="service-card">
-          <h3>AI & Data Analysis</h3>
-          <p>วิเคราะห์ข้อมูล สร้างโมเดล AI เพื่อคาดการณ์และแก้ปัญหาทางธุรกิจ</p>
-        </div>
-        <div class="service-card">
-          <h3>Data Visualization</h3>
-          <p>สร้างแผงควบคุม (dashboard) เพื่อแสดงผลข้อมูลแบบเรียลไทม์</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>ผลงานที่ผ่านมา</h2>
-      <ul class="projects-list">
-        <li>เว็บไซต์จองห้องประชุมออนไลน์</li>
-        <li>AI ทำนายโรคเบาหวาน</li>
-        <li>Dashboard วิเคราะห์ข้อมูลร้านกาแฟ</li>
-      </ul>
-      <p>ดูผลงานทั้งหมดที่ <a href="https://github.com/yourusername" target="_blank">GitHub Repository</a></p>
-    </div>
-  </section>
-
-  <section id="contact" class="section bg-light">
-    <div class="container">
-      <h2>ติดต่อผม</h2>
-      <p>Email: <a href="mailto:yourname@gmail.com">yourname@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
-      <p>LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourname</a></p>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 เจษฎา สุศากุลจินดา | Built with ❤️ on GitHub Pages</p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Rises Consulting | สร้างโดย Jetsada Susakunjinda</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
