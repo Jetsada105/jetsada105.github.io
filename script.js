@@ -1,2 +1,21 @@
-// เพิ่มอนาคตได้ เช่น ปุ่ม toggle เมนู หรือ dark mode
-console.log("Rises Consulting Website Loaded");
+// เปลี่ยนสีเมนูเมื่อ scroll ถึง section
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".navbar a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
