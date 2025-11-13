@@ -1,0 +1,106 @@
+/* ฟอนต์และโครงสร้างหลัก */
+body {
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  background: #0f1115;
+  color: #eaeaea;
+  line-height: 1.8;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* ส่วนหัว */
+header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #00adb5;
+}
+
+header p {
+  color: #bdbdbd;
+  font-size: 1.1rem;
+}
+
+/* Section */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1b1e24;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #00adb5;
+  border-left: 5px solid #00adb5;
+  padding-left: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+li::before {
+  content: "▹ ";
+  color: #00adb5;
+}
+
+a {
+  color: #00adb5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #39c0c8;
+}
+
+/* โปรไฟล์ */
+img.profile {
+  width: 140px;
+  border-radius: 50%;
+  display: block;
+  margin: 1rem auto 1.5rem auto;
+  border: 3px solid #00adb5;
+  box-shadow: 0 0 15px rgba(0,173,181,0.4);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #888;
+  padding: 1.5rem;
+  border-top: 1px solid #2c2f35;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
