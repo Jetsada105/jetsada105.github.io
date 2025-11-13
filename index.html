@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rises Consulting | หน้าแรก</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <title>Rises Consulting | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -13,39 +13,61 @@
     <div class="logo">Rises</div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">หน้าแรก / Home</a></li>
-        <li><a href="about.html">เกี่ยวกับเรา / About Us</a></li>
-        <li><a href="services.html">บริการ / Services</a></li>
-        <li><a href="contact.html">ติดต่อ / Contact</a></li>
+        <li><a href="#home" class="active">หน้าแรก / Home</a></li>
+        <li><a href="#about">เกี่ยวกับเรา / About</a></li>
+        <li><a href="#services">บริการ / Services</a></li>
+        <li><a href="#contact">ติดต่อ / Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+  <section id="home" class="hero">
     <div class="hero-text">
       <h1>Strategies for Success<br><span>กลยุทธ์สู่ความสำเร็จ</span></h1>
-      <p>We help students and professionals build their future.<br>เราช่วยให้นักศึกษาและมืออาชีพสร้างอนาคตที่ดีขึ้น</p>
-      <a href="contact.html" class="btn-outline">Get a Free Consultation</a>
+      <p>We help students and professionals build their future.<br>
+      เราช่วยให้นักศึกษาและมืออาชีพสร้างอนาคตที่ดีกว่า</p>
+      <a href="#contact" class="btn-outline">Get a Free Consultation</a>
     </div>
     <div class="hero-pattern"></div>
   </section>
 
-  <!-- Services Preview -->
-  <section class="cards">
-    <div class="card">
-      <h3>Strategies for Success</h3>
-      <p>I'm a paragraph. Click here to add your own text and edit me.  
-      ฉันคือส่วนข้อความ คุณสามารถแก้ไขเนื้อหาได้ที่นี่</p>
-      <a href="about.html" class="link">Read More</a>
-    </div>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>เกี่ยวกับเรา / About Us</h2>
+    <p>เราคือทีมที่ปรึกษาด้านเทคโนโลยีและนวัตกรรม 
+      ที่มุ่งเน้นช่วยให้นักศึกษาและองค์กรขนาดเล็กเติบโตด้วย AI, Data, 
+      และ Web Development.</p>
+    <p>We are a tech consulting team focusing on empowering students and SMEs 
+      with solutions in AI, Data Science, and Web Development.</p>
+  </section>
 
-    <div class="card">
-      <h3>Optimize Your Business</h3>
-      <p>Click here to add your text and edit me.  
-      คลิกเพื่อเพิ่มข้อความของคุณและแก้ไขได้</p>
-      <a href="services.html" class="link">Book Now</a>
+  <!-- Services Section -->
+  <section id="services" class="section light">
+    <h2>บริการของเรา / Our Services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>AI & Machine Learning</h3>
+        <p>วิเคราะห์ข้อมูล, พัฒนาโมเดลทำนาย, และระบบอัตโนมัติ.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>ออกแบบและสร้างเว็บไซต์ด้วยเทคโนโลยีทันสมัย 
+          HTML, CSS, JavaScript.</p>
+      </div>
+      <div class="card">
+        <h3>Data Dashboard</h3>
+        <p>สร้างแดชบอร์ดแสดงผลข้อมูลด้วย Power BI, Chart.js, หรือ Plotly.</p>
+      </div>
     </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>ติดต่อเรา / Contact</h2>
+    <p>📧 Email: yourname@gmail.com</p>
+    <p>🌐 GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <p>📍 จังหวัดอุดรธานี</p>
   </section>
 
   <!-- Footer -->
